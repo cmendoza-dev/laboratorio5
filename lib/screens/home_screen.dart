@@ -41,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Text('Mendoza.Solis', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.redAccent[700])),
             const Text(
               'Contador de clics en Flutter',
             ),
@@ -52,37 +53,44 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           FloatingActionButton(
-            backgroundColor: Colors.blue[900],
+            backgroundColor: Colors.orange[900],
             onPressed: _incrementCounter,
             tooltip: 'Increment',
             heroTag: null,
             child: const Icon(
-                Icons.add, color: Colors.white,), // Añade esto para evitar conflictos con el hero tag
+              Icons.add,
+              color: Colors.white,
+            ),
           ),
-          const SizedBox(width: 16), // Espacio entre los botones
+          const SizedBox(width: 20), 
           FloatingActionButton(
-            backgroundColor: Colors.blue[900],
+            backgroundColor: Colors.purple[900],
             onPressed: _updateCounter,
             tooltip: 'Update',
             heroTag: null,
-            child: const Icon(Icons
-                .update, color: Colors.white,), // Añade esto para evitar conflictos con el hero tag
+            child: const Icon(
+              Icons.exposure_zero,
+              color: Colors.white,
+            ), 
           ),
-          const SizedBox(width: 16), // Espacio entre los botones
+          const SizedBox(width: 20), // Espacio entre los botones
           FloatingActionButton(
-            backgroundColor: Colors.blue[900],
+            backgroundColor: Colors.green[900],
             onPressed: _removeCounter,
             tooltip: 'Remove',
             heroTag: null,
-            child: const Icon(Icons
-                .remove, color: Colors.white,), // Añade esto para evitar conflictos con el hero tag
+            child: const Icon(
+              Icons.remove,
+              color: Colors.white,
+            ), // 
           ),
           const SizedBox(height: 30)
         ],
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
